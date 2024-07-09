@@ -1,0 +1,6 @@
+<div class="svg-area">
+	<svg class="full-screen">
+		<path *ngFor="let path of paths" class="svg-path" stroke-dasharray="7, 5" [attr.d]="getD(path)" />
+	</svg>
+</div>
+<node *ngFor="let node of nodes" [node]="node" (changePosition)="handleChangeNodePosition($event)"></node>

@@ -1,0 +1,9 @@
+<div class="node" cdkDrag (cdkDragMoved)="handleDragMoved($event)" [cdkDragFreeDragPosition]="node.initialPosition"
+	(cdkDragMoved)="handleDragMoved($event)">
+	<input-socket *ngIf="node.inputSocket"></input-socket>
+	<div class="circle">
+		{{node.icon}}
+	</div>
+	<div class="title">{{node.title}}</div>
+	<output-socket *ngIf="node.outputSocket"></output-socket>>
+</div>
